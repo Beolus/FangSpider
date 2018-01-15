@@ -15,7 +15,7 @@
 # DB_Pwd = '123456'
 
 #Mongodb
-Mongodb_Host = '192.168.1.123'
+Mongodb_Host = 'localhost'
 Mongodb_Port = 27017
 
 BOT_NAME = 'FangSpider'
@@ -43,6 +43,8 @@ DOWNLOAD_DELAY = 5
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
+
+LOG_LEVEL = 'INFO'
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -105,6 +107,6 @@ SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 REDIE_URL = None
-REDIS_HOST = '192.168.1.123'
+REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 

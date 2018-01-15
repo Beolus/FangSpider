@@ -9,13 +9,13 @@ import pymongo
 import settings
 from items import FangspiderItem
 from datetime import datetime
-
+from FangSpider.log import logger
 
 class FangspiderPipeline(object):
     def __init__(self):
         client = pymongo.MongoClient(host=settings.Mongodb_Host,port=settings.Mongodb_Port)
         db = client["fangdb"]
-        nowtime = datetime.now().strftime('%Y%m%d%H%M%S')
+        nowtime = datetime.now().strftime('%Y%m%d')
         self.newfanginfo = db[nowtime]
 
     def process_item(self,item,spider):
@@ -23,5 +23,5 @@ class FangspiderPipeline(object):
             try:
                 self.newfanginfo.insert(dict(item))
             except Exception as e:
-                print e
+                logger.error(e)
         return item
