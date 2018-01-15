@@ -2,10 +2,10 @@
 import scrapy
 import re
 import time
-from FangSpider.items import FangspiderItem
+from ..items import FangspiderItem
 from scrapy_redis.spiders import RedisSpider
 from scrapy.http import Request
-from FangSpider.log import logger
+from ..log import logger
 
 class NewfangspiderSpider(RedisSpider):
     name = 'NewFangSpider'

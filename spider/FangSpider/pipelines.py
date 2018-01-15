@@ -9,7 +9,7 @@ import pymongo
 import settings
 from items import FangspiderItem
 from datetime import datetime
-from FangSpider.log import logger
+from .log import logger
 
 class FangspiderPipeline(object):
     def __init__(self):
